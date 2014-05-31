@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
+	<head>
+		<meta charset="utf-8" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Roy Magen - Mathematica</title>
+		<meta name="description" content="Roy Magen Mathematica Applications" />
+		<meta name="author" content="Roy Magen" />
+		<meta itemprop="name" content="Roy Magen">
+		<meta itemprop="description" content="Roy Magen Mathematica Applications">
+		<meta itemprop="image" content="">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+		<link href="/CSS/stylesheet.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" href="/Graphics/favicon.ico" />
+		<link rel="apple-touch-icon" href="/Graphics/logo.png" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script type="text/javascript" src="https://blockchain.info//Resources/wallet/pay-now-button.js"></script>
+		<script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script>
+		<script type="text/javascript" src="/Javascript/script.js"></script>
+		<script>
+			//<![CDATA[
+
+			var cdfs = new Array();
+			cdfs[0] = ["Function Transformer", "FunctionTransformer.cdf", 855, 410];
+			cdfs[1] = ["Ellipses", "Ellipses.cdf", 444, 516];
+			cdfs[2] = ["Total Internal Reflection", "TotalInternalReflection.cdf", 329, 423];
+
+			var buttons = new Array();
+			for (var i = 0; i < cdfs.length; i++) {
+				buttons[i] = "<button onclick = \"cdfSelector(" + i.toString() + ")\">" + cdfs[i][0].toString() + "</button>";
+			}
+
+			function init() {
+				for (var i = 0; i < buttons.length; i++) {
+					self.document.getElementById("selection").innerHTML += "<li>" + buttons[i] + "</li>";
+				}
+			}
+
+			function cdfEmbed() {
+				var cdf = new cdfplugin();
+				if (index < cdfs.length && index >= 0) {
+					cdf.embed(cdfs[index][1], cdfs[index][2], cdfs[index][3]);
+				};
+			}
+
+			function cdfSelector(index) {
+				//self.document.getElementById("cdf").innerHTML = "<script>" + "self.cdfEmbed(" + index.toString() + ");" + "<" + "/script>";
+				self.document.getElementById("cdf").innerHTML = cdfs[index][0];
+			}
+
+			//]]>
+		</script>
+		<style>
+			#selection {
+				list-style-type: none;
+				overflow: hidden;
+				width: 100%;
+			}
+			#selection li {
+				display: inline;
+				float: left;
+				width: auto;
+			}
+		</style>
+	</head>
+
+	<body onload = "init()">
+		<noscript>
+			Please enable javascript
+		</noscript>
+
+		<div id = "navbar">
+			<nav>
+				<ul>
+					<div id = "navbar-right">
+						<li >
+							<img src = "/Graphics/logo.png" alt = "logo">
+						</li>
+						<li>
+							<div class="g-plusone" data-annotation="none"></div>
+						</li>
+					</div>
+					<div id = "navbar-left">
+						<li>
+							<a href="/index.html">Home</a>
+						</li>
+						<li>
+							<a href = "https://sites.google.com/a/roymagen.com/pictures/">Pictures</a>
+						</li>
+						<li>
+							<a href = "/HTML/Applications/main.html">Applications</a>
+						</li>
+					</div>
+				</ul>
+			</nav>
+		</div>
+
+		<header>
+			<h1 id = "title">Mathematica</h1>
+			<div id = "g-plus">
+				<div class="g-plus" data-height="69" data-href="//plus.google.com/115202908262710219674" data-rel="author"></div>
+				<div class="g-plus" data-height="69" data-href="//plus.google.com/103065839572869518759" data-rel="publisher"></div>
+			</div>
+		</header>
+
+		<div id = "content">
+			<div  itemscope itemtype="http://schema.org/SoftwareApplication">
+				<div>
+					<ul id = "selection"></ul>
+				</div>
+				<div id = "cdf">
+					<script>
+						self.cdfEmbed(0);
+					</script>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<hr>
+			<p>
+				&copy; Copyright by Roy Magen
+			</p>
+		</footer>
+	</body>
+</html>
