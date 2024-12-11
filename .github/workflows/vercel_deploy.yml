@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - main
+    - master
 env:
   CARGO_TERM_COLOR: always
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
