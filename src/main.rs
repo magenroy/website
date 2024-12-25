@@ -15,20 +15,28 @@ fn App(increment: i32) -> impl IntoView {
         <h1>"Welcome to Leptos"</h1>
         <h2><i>"On Vercel"</i></h2>
 
-        <button
-            on:click= move |_| {
-                set_count(count() + increment)
-            }
-        >
-            "Click me: "
-            {count}
-        </button>
+        <Button increment=increment />
+        // <button
+        //     on:click= move |_| {
+        //         set_count(count() + increment)
+        //     }
+        // >
+        //     "Click me: "
+        //     {count}
+        // </button>
 
 
     </div>
     }
 }
 
+fn Button(increment: i32) -> impl IntoView {
+    let (count, set_count) = create_signal(0);
+
+    view! {
+        <button on:click= move |_| {set_count(count() + increment)} "Click me: " {count} </button>
+    }
+}
 fn main() {
     mount_to_body(|| {
         view! {
