@@ -1,7 +1,7 @@
 use leptos::*;
 
 #[component]
-fn App(increment: i32) -> impl IntoView {
+fn LeptosHellowWorld(increment: i32) -> impl IntoView {
     let (count, set_count) = create_signal(0);
 
     view! {
@@ -15,7 +15,6 @@ fn App(increment: i32) -> impl IntoView {
         <h1>"Welcome to Leptos"</h1>
         <h2><i>"On Vercel"</i></h2>
 
-        // <Button increment=increment />
         <button
             on:click= move |_| {
                 set_count(count() + increment)
@@ -30,9 +29,9 @@ fn App(increment: i32) -> impl IntoView {
     }
 }
 
+#[component]
 fn Button(increment: i32) -> impl IntoView {
     let (count, set_count) = create_signal(0);
-
     view! {
         <button on:click= move |_| {set_count(count() + increment)}> "Click me: " {count} </button>
     }
@@ -40,7 +39,7 @@ fn Button(increment: i32) -> impl IntoView {
 fn main() {
     mount_to_body(|| {
         view! {
-            <App increment=5 />
+            <Button increment=5 />
         }
     })
 }
