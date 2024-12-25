@@ -15,15 +15,15 @@ fn App(increment: i32) -> impl IntoView {
         <h1>"Welcome to Leptos"</h1>
         <h2><i>"On Vercel"</i></h2>
 
-        <Button increment=increment />
-        // <button
-        //     on:click= move |_| {
-        //         set_count(count() + increment)
-        //     }
-        // >
-        //     "Click me: "
-        //     {count}
-        // </button>
+        // <Button increment=increment />
+        <button
+            on:click= move |_| {
+                set_count(count() + increment)
+            }
+        >
+            "Click me: "
+            {count}
+        </button>
 
 
     </div>
