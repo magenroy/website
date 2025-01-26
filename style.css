@@ -1,0 +1,41 @@
+.todo {
+	border-left: 2px dotted red;
+}
+
+.unfinished {
+	border-left: 1px solid red;
+}
+
+.unread {
+	border-left: 2px dotted orange;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+body { 
+    font-family: arial;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+a:link {
+    color: #0020C2;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #0020C2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0020C2;
+}
+
+a:active {
+    color: #B93B8F;
+}

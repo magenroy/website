@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>sifted</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+
+<ul>
+<li>5.5.8.11: sifted colimits commute with finite products (but does not give an equivalence!)
+<ul>
+<li>Unfortunately I cannot find a reference confirming or denying something analogous to 5.3.3.3 (about filtered colimits), that is, that a category <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?J" alt="J" title="J" /> is sifted if and only if finite products in spaces commute with <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?J" alt="J" title="J" />-indexed colimits. Maybe later I’ll try to prove it myself, but it might not matter.</li>
+</ul></li>
+<li>The opposite of the simplex category is sifted (5.5.8.4)</li>
+<li><span style="color:red">(KEY)</span> <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BPsh%7D_%5CSigma" alt="\mathrm{Psh}_\Sigma" title="\mathrm{Psh}_\Sigma" /> is defined in 5.5.8.8 as the presheaves which send finite coproducts to products. <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BPsh%7D_%5CSigma%28%5Cmathcal%20C%29" alt="\mathrm{Psh}_\Sigma(\mathcal C)" title="\mathrm{Psh}_\Sigma(\mathcal C)" /> is particularly well-behaved when <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C" alt="\mathcal C" title="\mathcal C" /> admits finite coproducts.
+<ul>
+<li>5.5.8.10 (1) says that <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BPsh%7D_%5CSigma" alt="\mathrm{Psh}_\Sigma" title="\mathrm{Psh}_\Sigma" /> is presentable, (6) says it is even compactly generated.</li>
+<li>5.5.8.10 (2) says that <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C%20%5Cto%20%5Cmathrm%7BPsh%7D_%5CSigma%28%5Cmathcal%20C%29" alt="\mathcal C \to \mathrm{Psh}_\Sigma(\mathcal C)" title="\mathcal C \to \mathrm{Psh}_\Sigma(\mathcal C)" /> preserves finite coproducts. This is not hard to prove - just need to find a good way to understand what it means for a functor to preserve finite coproducts.<br />
+</li>
+<li>5.5.8.10 (4) says that <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BPsh%7D_%5CSigma%28%5Cmathcal%20C%29" alt="\mathrm{Psh}_\Sigma(\mathcal C)" title="\mathrm{Psh}_\Sigma(\mathcal C)" /> is stable under sifted colimits in <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BPsh%7D%28%5Cmathcal%20C%29" alt="\mathrm{Psh}(\mathcal C)" title="\mathrm{Psh}(\mathcal C)" />. We can see this by applying 5.5.8.11 to sifted colimits in <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BPsh%7D%28%5Cmathcal%20C%29" alt="\mathrm{Psh}(\mathcal C)" title="\mathrm{Psh}(\mathcal C)" />.</li>
+</ul></li>
+<li>The condition of <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?K" alt="K" title="K" /> being nonempty and <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?K%20%5Cto%20K%20%5Ctimes%20K" alt="K \to K \times K" title="K \to K \times K" /> being cofinal is equivalent to the condtion of <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?K%20%5Cto%20K%5En" alt="K \to K^n" title="K \to K^n" /> for cofinal for all <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?n" alt="n" title="n" />, and is analogous to 5.3.1.22 saying that <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?K" alt="K" title="K" /> is filtered if and only if <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?K%20%5Cto%20K%5EJ" alt="K \to K^J" title="K \to K^J" /> is cofinal for all finite <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?J" alt="J" title="J" />.</li>
+<li>Sifted colimits is sort of like “filtered colimits + geometric realizations (colimits of simplicial objects)”
+<ul>
+<li>Geometric realizations is like quotienting by equivalence relations
+<ul>
+<li>The 1-categorical version of this is taking reflexive coequalizers.</li>
+<li>This is analogous to the fact that where as the 1-truncated (i.e. 1-categorical) sheaf condition requires only an equalizer, the full sheaf condition requires a totalization (limit of a cosimplicial object).</li>
+<li>Examples:
+<ul>
+<li>Taking the geometric realization of a simplicial set corresponds to viewing the simplicial set as a simplicial space and then taking the colimit. The 1-simplices are like homotopical relations between the 0-simplices, so instead of the colimit making the endpoints of a 1-simplex equal, it just attached an interval between them.</li>
+<li>The composite functor from simplicial objects in commutative rings which first views them as simplicial objects in <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BSCRing%7D" alt="\mathrm{SCRing}" title="\mathrm{SCRing}" /> (which are levelwise discrete), and then takes geometric realization, is an equivalence after localizing the domain along weak equivalences of underlying simplicial sets.</li>
+</ul></li>
+</ul></li>
+<li>Filtered colimits is things which are sort of like sequential colimits (think nested unions)</li>
+<li>5.5.8.14 makes this precise: if <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C" alt="\mathcal C" title="\mathcal C" /> admits finite products, then a presheaf <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?X%20%5Cin%20%5Cmathrm%7BPsh%7D%28%5Cmathcal%20C%29" alt="X \in \mathrm{Psh}(\mathcal C)" title="X \in \mathrm{Psh}(\mathcal C)" /> is in <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BPsh%7D_%5CSigma%28%5Cmathcal%20C%29" alt="\mathrm{Psh}_\Sigma(\mathcal C)" title="\mathrm{Psh}_\Sigma(\mathcal C)" /> if and only if it is a geometric realization of a simplicial object in <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BInd%7D%28%5Cmathcal%20C%29" alt="\mathrm{Ind}(\mathcal C)" title="\mathrm{Ind}(\mathcal C)" />
+<ul>
+<li>For example, any SCR is a geometric realization of a simplicial object in <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BInd%7D%28%5Cmathrm%7BPoly%7D%29" alt="\mathrm{Ind}(\mathrm{Poly})" title="\mathrm{Ind}(\mathrm{Poly})" />.</li>
+</ul></li>
+<li>5.5.8.15: <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BFun%7D%28%5Cmathcal%20C%2C%20%5Cmathcal%20D%29%20%3D" alt="\mathrm{Fun}(\mathcal C, \mathcal D) =" title="\mathrm{Fun}(\mathcal C, \mathcal D) =" /> functors from <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BPsh%7D_%5CSigma%28%5Cmathcal%20C%29" alt="\mathrm{Psh}_\Sigma(\mathcal C)" title="\mathrm{Psh}_\Sigma(\mathcal C)" /> to <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathcal%20D" alt="\mathcal D" title="\mathcal D" /> preserving filtered colimits and geometric realizations (for <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C" alt="\mathcal C" title="\mathcal C" /> admitting finite coproducts and <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathcal%20D" alt="\mathcal D" title="\mathcal D" /> admitting filtered colimits and geometric realizations)</li>
+<li><span style="color:red">(KEY)</span> 5.5.8.17: a functor (from a cocomplete category) preserves sifted colimits if and only if preserves filtered colimits and geometric realizations</li>
+</ul></li>
+<li>Consequence for <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BSCRing%7D" alt="\mathrm{SCRing}" title="\mathrm{SCRing}" />: we don’t actually need to talk about the definition of sifted colimits, and we may just consider filtered colimits and geometric realizations <span style="color:red">(KEY)</span>
+<ul>
+<li><img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BSCRing%7D" alt="\mathrm{SCRing}" title="\mathrm{SCRing}" /> is <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BPsh%7D_%5CSigma%28%5Cmathrm%7BPoly%7D%29" alt="\mathrm{Psh}_\Sigma(\mathrm{Poly})" title="\mathrm{Psh}_\Sigma(\mathrm{Poly})" />, and if <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C" alt="\mathcal C" title="\mathcal C" /> admits filtered colimits and geometric realizations, then <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BFun%7D%28%5Cmathrm%7BPoly%7D%2C%20%5Cmathcal%20C%29" alt="\mathrm{Fun}(\mathrm{Poly}, \mathcal C)" title="\mathrm{Fun}(\mathrm{Poly}, \mathcal C)" /> is the same as the full subcategory of <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BFun%7D%28%5Cmathrm%7BSCRing%7D%2C%5Cmathcal%20C%29" alt="\mathrm{Fun}(\mathrm{SCRing},\mathcal C)" title="\mathrm{Fun}(\mathrm{SCRing},\mathcal C)" /> which preserve filtered colimits and geometric realizations.</li>
+<li>More generally, Adeel Khan’s <img style="vertical-align:middle" src="https://latex.codecogs.com/png.latex?%5Cmathrm%7BFun%7D_%5Cmathrm%7Bsift%7D" alt="\mathrm{Fun}_\mathrm{sift}" title="\mathrm{Fun}_\mathrm{sift}" /> notation corresponds to taking functors which commute with filtered colimits and geometric realizations.</li>
+</ul></li>
+</ul>
+</body>
+</html>

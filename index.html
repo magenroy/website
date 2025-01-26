@@ -1,13 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link data-trunk rel="css" rel="stylesheet" href="style.css" /> -->
-    <title>Leptos Example</title>
 
-    <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
-    <link data-trunk rel="rust" data-wasm-opt="z" data-weak-refs />
-  </head>
-  <body> HI </body>
+<head>
+	<title>Roy Magen</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link data-trunk rel="css" rel="stylesheet" href="style.css" />
+	<style>
+		td,
+		table {
+			border-color: transparent;
+		}
+	</style>
+
+	<!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
+	<link data-trunk rel="rust" data-wasm-opt="z" data-weak-refs />
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td valign="top">
+				<h1>Roy Magen</h1>
+
+				<p>
+					PhD student at <br />
+					<a href="https://www.math.columbia.edu/"> Columbia University </a>
+					<br />
+				</p>
+
+				<p>Email: magenroy[at]math[dot]columbia[dot]edu</p>
+			</td>
+
+			<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+
+			<!-- <td valign=top>
+		TODO: photo
+        </td> -->
+		</tr>
+	</table>
+
+	<h3>About</h3>
+
+	<p>
+		I'm PhD student at Columbia working with Andrew Blumberg and Aise Johan de
+		Jong. My current research focuses on equivariant and motivic homotopy
+		theory, and in particular on six-functor formalisms (and variants) in the
+		context of "stacky" geometry. I am also generally interested in various
+		topics in homotopy theory and algebraic geometry, including K-theory,
+		derived algebraic geometry, and TQFTs and factorization homology. My
+		master's thesis on a variation of locally constant prefactorization
+		algebras was supervised by Damien Calaque in 2019.
+	</p>
+
+	<h3>Seminars</h3>
+	<ul>
+		<li>
+			<a href="static/DAG-seminar.html">
+				Derived algebraic geometry seminar at Columbia University
+			</a>
+		</li>
+
+		<li>
+			<a href="static/motivicseminar.html">
+				Motivic homotopy theory seminar at Columbia University
+			</a>
+		</li>
+
+		<li>
+			<a href="static/MilnorWittMotivesSeminar.html">
+				Milnor-Witt motives seminar at Columbia University
+			</a>
+		</li>
+	</ul>
+
+	<h3>Links to useful resources</h3>
+
+	<ul>
+		<li>
+			<a href="static/resources.html"> Unsorted resources </a>
+		</li>
+
+		<li>
+			<a href="static/DAG-resources.html"> DAG/SAG resources </a>
+		</li>
+
+		<li>
+			<a href="static/Motives-resources.html"> Motives resources </a>
+		</li>
+	</ul>
+</body>
+
 </html>
