@@ -4,4 +4,4 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-leptos = {version = "0.5.1", features = ["csr", "nightly"]}
+leptos = {version = "0.7.4", features = ["csr", "nightly"]}

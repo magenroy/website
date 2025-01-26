@@ -1,8 +1,8 @@
-use leptos::*;
+use leptos::prelude::*;
 
 #[component]
 fn LeptosHellowWorld(increment: i32) -> impl IntoView {
-    let (count, set_count) = create_signal(0);
+    let (count, set_count) = signal(0);
 
     view! {
     <div class="container">
@@ -31,7 +31,7 @@ fn LeptosHellowWorld(increment: i32) -> impl IntoView {
 
 #[component]
 fn Button(increment: i32) -> impl IntoView {
-    let (count, set_count) = create_signal(0);
+    let (count, set_count) = signal(0);
     view! {
         <button on:click= move |_| {set_count(count() + increment)}> "Click me: " {count} </button>
     }
